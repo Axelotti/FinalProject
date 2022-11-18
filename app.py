@@ -20,8 +20,3 @@ def greet(name):
 def hello_world2():
     return render_template('base.css')
 
-@app.route('/form', methods=['GET', 'POST'])
-def formDemo():
-    if request.method == 'POST':
-        name=request.form['name']
-    return render_template('form.html', name=name)
