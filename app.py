@@ -9,9 +9,10 @@ def readDetails(filepath):
 
 @app.route("/")
 def homePage():
-    name = 'Axel Cortes'
+    groupName= 'Group 7:'
+    name = 'Axel Cortes, Israel Lopez, Eric Villa, Erick Montenegro'
     details = readDetails('static/details.txt')
-    return render_template('base.html', name = name, aboutMe = details)
+    return render_template('project.html', name = name, aboutMe = details, groupName = groupName)
 
 @app.route("/user/<name>")
 def greet(name):
